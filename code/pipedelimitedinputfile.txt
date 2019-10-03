@@ -1,0 +1,19 @@
+CnBio_ID|Last Name|Maiden Name|First Name|Nickname|Deceased?|Lost Address?|Class of|Email Type|Email|Email Comments|Email Type_1|Email_1|Email Comments_1|Address 1|Address 2|Address 3|City|State|Zip|Send Mail?|CnAdrSal_Addressee|CnAdrSal_Salutation|yearbookphoto
+1990001|Acker||Ann|Ann|No|No|1990|Email 1|acker@example.com|||||1234 Acker way|||CityName|ST|99999-0000|Yes|Ms. Ann K. Acker|Ms. Acker|001_AnnAcker
+1990002|Backer||Dave|Dave|No|No|1990|Email 1||||||3456 Backer Dr|||CityName|ST|99999-0000|Yes|Mr. Dave Backer|Mr. Backer|002_DaveBacker
+1990003|Smacker|Cacker|Mary|Mary|No|No|1990|Email 1|smacker@example.com|||||4567 Smacker Dr|||CityName|ST|99999-0000|Yes|Ms. Mary Smacker|Ms. Smacker|003_MaryCacker
+1990004|Dacker||Robert|Bob|No|No|1990|Email 1||||||7654 Dacker Dr|||CityName|ST|99999-0000|Yes|Mr. Bob Dacker|Mr. Dacker|004_BobDacker
+1990005|Eacker||Harold|Harry|No|No|1990|Email 1||||||123 Eacker Dr|||CityName|ST|99999-0000|Yes|Mr. Harry Eacker|Mr. Eacker|005_HarryEacker
+1990006|Facker||Betty|Betty|No|No|1990|Email 1|facker@example.com|||||1234 Acker way|||CityName|ST|99999-0000|Yes|Ms. Berry Facker|Ms. Facker|006_BettyFacker
+1990007|Gacker||Theodore|Ted|No|No|1990|Email 1|gacker@example.com|||||5467 Gacker Dr|||CityName|ST|99999-0000|Yes|Mr. Ted Gacker|Mr. Gacker|007_TedGacker
+1990008|Wacker|Hacker|Cheryl|Cheryl|No|No|1990|Email 1|wacker@example.com|||||456 Wacker Dr|||CityName|ST|99999-0000|Yes|Ms. Cheryl Wacker|Ms. Wacker|008_CherylHacker
+1990009|Iacker||Brian|Brian|No|No|1990|Email 1||||||888 Iacker Dr|||CityName|ST|99999-0000|Yes|Mr. Brian Iacker|Mr. Iacker|
+1990010|Jacker||Barry|Barry|No|No|1990|Email 1||||||934 Jacker Dr|||CityName|ST|99999-0000|Yes|Mr. Barry Jacker|Mr. Jacker|009_BarryJacker
+1990011|Zacker|Kacker|Theresa|Terry|No|No|1990|Email 1||||||536 Zacker Dr|||CityName|ST|99999-0000|Yes|Ms. Terry Zacker|Ms. Zacker|010_TerryKacker
+1990012|Lacker||Timothy|Tim|No|No|1990|Email 1||||||656 Lacker Dr|||CityName|ST|99999-0000|Yes|Mr. Tim Lacker|Mr. Lacker|011_TimothyLacker
+1990013|Macker||Richard|Rich|No|No|1990|Email 1|macker@example.com|||||757 Macker Dr|||CityName|ST|99999-0000|Yes|Mr. Richard Lacker|Mr. Macker|012_RichardMacker
+1990014|Nacker||Jennifer|Jen|No|No|1990|Email 1||||||246 Nacker Dr|||CityName|ST|99999-0000|Yes|Ms. Jen Nacker|Ms. Nacker|013_JenniferNacker
+1990015|O Acker||Joseph|Joe|No|No|1990|Email 1|oacker@example.com|||||8901 Oacker Dr|||CityName|ST|99999-0000|Yes|Mr. Joseph O Acker|Mr. O Acker|014_JoeOAcker
+1990016|Packer||Neil|Neil|No|No|1990|Email 1|packer@example.com|||||1532 Packer Dr|||CityName|ST|99999-0000|Yes|Mr. Neil Packer|Mr. Packer|015_NeilPacker
+1990017|Racker|Qacker|Brenda|Brenda|No|No|1990|Email 1|racker@example.com|||||5336 Racker Dr|||CityName|ST|99999-0000|Yes|Ms. Brenda Racker|Ms. Racker|016_BrendaQacker
+1990018|Yacker||Yeet|Yeet|No|No|1990|Email 1||||||9000 Yacker Dr|||CityName|ST|99999-0000|Yes|Mr. Yeet Yaker|Mr. Yacker|

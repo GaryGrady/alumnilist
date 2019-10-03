@@ -1,0 +1,22 @@
+
+<style>
+body {
+  margin: 40px;
+}
+
+.student {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.wrapper {
+  width: 600px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, 340px);
+}
+</style>
+

@@ -1,0 +1,273 @@
+<html><head></head>
+
+<body onload="javascript:BodyLoad();"  >
+
+<style>
+body {
+  margin: 40px;
+}
+
+.student {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.wrapper {
+  width: 600px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, 340px);
+  z-index: 1;
+  position: absolute;
+}
+.datawrapper {
+  display:none;
+  background-color: #303030;
+  //opacity: 0.6;
+  width: 100% ;
+  height:100% ;
+  z-index: 1;
+
+  position: fixed;
+  margin-left: -40px;
+  margin-top: -40px;
+}
+.pic {
+  background-color: #aaaaaa;
+  z-index: 2;
+  //opacity: 1;
+  width: 300px;
+  height: 500px;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+.data {
+  background-color: #cf3030;
+  font-size: 300%;
+  z-index: 2;
+  //opacity: 1;
+  width: 750px;
+  height: 220px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+.dataDetail {
+  background-color: #cf3030;
+
+  position: relative;
+
+  margin-left: 10px;
+}
+.datashy {
+  background-color: #cf3030;
+  font-size: 200%;
+  z-index: 2;
+  //opacity: 1;
+  width: 90%;
+  height: 90%;
+  position: fixed;
+  top: 05%;
+  left: 05%;
+  margin-left: -40px;
+  margin-top: -40px;
+}
+</style>
+
+
+<div class="wrapper">
+<div class = "student" id='001_AnnAcker' onclick="showdata('001_AnnAcker')"><img src="001_AnnAcker.png" alt="Ann Acker" /></div><div class = "student" id='002_DaveBacker' onclick="showdata('002_DaveBacker')"><img src="002_DaveBacker.png" alt="Dave Backer" /></div><div class = "student" id='003_MaryCacker' onclick="showdata('003_MaryCacker')"><img src="003_MaryCacker.png" alt="Mary Cacker" /></div><div class = "student" id='004_BobDacker' onclick="showdata('004_BobDacker')"><img src="004_BobDacker.png" alt="Bob Dacker" /></div><div class = "student" id='005_HarryEacker' onclick="showdata('005_HarryEacker')"><img src="005_HarryEacker.png" alt="Harry Eacker" /></div><div class = "student" id='006_BettyFacker' onclick="showdata('006_BettyFacker')"><img src="006_BettyFacker.png" alt="Betty Facker" /></div><div class = "student" id='007_TedGacker' onclick="showdata('007_TedGacker')"><img src="007_TedGacker.png" alt="Ted Gacker" /></div><div class = "student" id='008_CherylHacker' onclick="showdata('008_CherylHacker')"><img src="008_CherylHacker.png" alt="Cheryl Hacker" /></div><div class = "student" id='009_BarryJacker' onclick="showdata('009_BarryJacker')"><img src="009_BarryJacker.png" alt="Barry Jacker" /></div><div class = "student" id='010_TerryKacker' onclick="showdata('010_TerryKacker')"><img src="010_TerryKacker.png" alt="Terry Kacker" /></div><div class = "student" id='011_TimothyLacker' onclick="showdata('011_TimothyLacker')"><img src="011_TimothyLacker.png" alt="Timothy Lacker" /></div><div class = "student" id='012_RichardMacker' onclick="showdata('012_RichardMacker')"><img src="012_RichardMacker.png" alt="Richard Macker" /></div><div class = "student" id='013_JenniferNacker' onclick="showdata('013_JenniferNacker')"><img src="013_JenniferNacker.png" alt="Jennifer Nacker" /></div><div class = "student" id='014_JoeOAcker' onclick="showdata('014_JoeOAcker')"><img src="014_JoeOAcker.png" alt="Joe OAcker" /></div><div class = "student" id='015_NeilPacker' onclick="showdata('015_NeilPacker')"><img src="015_NeilPacker.png" alt="Neil Packer" /></div><div class = "student" id='016_BrendaQacker' onclick="showdata('016_BrendaQacker')"><img src="016_BrendaQacker.png" alt="Brenda Qacker" /></div>
+<div class = "student" id='999_CameraShy' onclick="showdata('999_CameraShy')"><img src="camerashy.png" alt="Camera Shy" /></div>
+</div>
+<div id="datawrapper" class="datawrapper" onclick="closedata()">
+  <div id="picdiv" class="pic"></div>
+  <div id="datadiv" class="data"></div>
+</div>
+<div id="datawrappershy" class="datawrapper" onclick="closedata()">
+  <div id="datadivshy" class="datashy"></div>
+</div>
+</body>
+<script type="text/javascript" language="JavaScript">
+
+var alumnilist = {"alumni":[{ "CnBio_ID":"1990001" , "LastName":"Acker" , "MaidenName":"" , "FirstName":"Ann" , "Nickname":"Ann" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"acker@example.com" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"1234 Acker way" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Ms. Ann K. Acker" , "CnAdrSal_Salutation":"Ms. Acker" , "yearbookphoto":"001_AnnAcker" } , { "CnBio_ID":"1990002" , "LastName":"Backer" , "MaidenName":"" , "FirstName":"Dave" , "Nickname":"Dave" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"3456 Backer Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Mr. Dave Backer" , "CnAdrSal_Salutation":"Mr. Backer" , "yearbookphoto":"002_DaveBacker" } , { "CnBio_ID":"1990003" , "LastName":"Smacker" , "MaidenName":"Cacker" , "FirstName":"Mary" , "Nickname":"Mary" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"smacker@example.com" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"4567 Smacker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Ms. Mary Smacker" , "CnAdrSal_Salutation":"Ms. Smacker" , "yearbookphoto":"003_MaryCacker" } , { "CnBio_ID":"1990004" , "LastName":"Dacker" , "MaidenName":"" , "FirstName":"Robert" , "Nickname":"Bob" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"7654 Dacker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Mr. Bob Dacker" , "CnAdrSal_Salutation":"Mr. Dacker" , "yearbookphoto":"004_BobDacker" } , { "CnBio_ID":"1990007" , "LastName":"Gacker" , "MaidenName":"" , "FirstName":"Theodore" , "Nickname":"Ted" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"gacker@example.com" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"5467 Gacker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Mr. Ted Gacker" , "CnAdrSal_Salutation":"Mr. Gacker" , "yearbookphoto":"007_TedGacker" } , { "CnBio_ID":"1990008" , "LastName":"Wacker" , "MaidenName":"Hacker" , "FirstName":"Cheryl" , "Nickname":"Cheryl" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"wacker@example.com" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"456 Wacker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Ms. Cheryl Wacker" , "CnAdrSal_Salutation":"Ms. Wacker" , "yearbookphoto":"008_CherylHacker" } , { "CnBio_ID":"1990009" , "LastName":"Iacker" , "MaidenName":"" , "FirstName":"Brian" , "Nickname":"Brian" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"888 Iacker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Mr. Brian Iacker" , "CnAdrSal_Salutation":"Mr. Iacker" , "yearbookphoto":"" } , { "CnBio_ID":"1990010" , "LastName":"Jacker" , "MaidenName":"" , "FirstName":"Barry" , "Nickname":"Barry" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"934 Jacker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Mr. Barry Jacker" , "CnAdrSal_Salutation":"Mr. Jacker" , "yearbookphoto":"009_BarryJacker" } , { "CnBio_ID":"1990011" , "LastName":"Zacker" , "MaidenName":"Kacker" , "FirstName":"Theresa" , "Nickname":"Terry" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"536 Zacker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Ms. Terry Zacker" , "CnAdrSal_Salutation":"Ms. Zacker" , "yearbookphoto":"010_TerryKacker" } , { "CnBio_ID":"1990012" , "LastName":"Lacker" , "MaidenName":"" , "FirstName":"Timothy" , "Nickname":"Tim" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"656 Lacker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Mr. Tim Lacker" , "CnAdrSal_Salutation":"Mr. Lacker" , "yearbookphoto":"011_TimothyLacker" } , { "CnBio_ID":"1990013" , "LastName":"Macker" , "MaidenName":"" , "FirstName":"Richard" , "Nickname":"Rich" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"macker@example.com" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"757 Macker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Mr. Richard Lacker" , "CnAdrSal_Salutation":"Mr. Macker" , "yearbookphoto":"012_RichardMacker" } , { "CnBio_ID":"1990014" , "LastName":"Nacker" , "MaidenName":"" , "FirstName":"Jennifer" , "Nickname":"Jen" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"246 Nacker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Ms. Jen Nacker" , "CnAdrSal_Salutation":"Ms. Nacker" , "yearbookphoto":"013_JenniferNacker" } , { "CnBio_ID":"1990015" , "LastName":"O Acker" , "MaidenName":"" , "FirstName":"Joseph" , "Nickname":"Joe" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"oacker@example.com" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"8901 Oacker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Mr. Joseph O Acker" , "CnAdrSal_Salutation":"Mr. O Acker" , "yearbookphoto":"014_JoeOAcker" } , { "CnBio_ID":"1990016" , "LastName":"Packer" , "MaidenName":"" , "FirstName":"Neil" , "Nickname":"Neil" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"packer@example.com" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"1532 Packer Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Mr. Neil Packer" , "CnAdrSal_Salutation":"Mr. Packer" , "yearbookphoto":"015_NeilPacker" } , { "CnBio_ID":"1990017" , "LastName":"Racker" , "MaidenName":"Qacker" , "FirstName":"Brenda" , "Nickname":"Brenda" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"racker@example.com" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"5336 Racker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Ms. Brenda Racker" , "CnAdrSal_Salutation":"Ms. Racker" , "yearbookphoto":"016_BrendaQacker" } , { "CnBio_ID":"1990018" , "LastName":"Yacker" , "MaidenName":"" , "FirstName":"Yeet" , "Nickname":"Yeet" , "Deceased?":"No" , "LostAddress?":"No" , "Classof":"1990" , "EmailType":"Email 1" , "Email":"" , "EmailComments":"" , "EmailType_1":"" , "Email_1":"" , "EmailComments_1":"" , "Address1":"9000 Yacker Dr" , "Address2":"" , "Address3":"" , "City":"CityName" , "State":"ST" , "Zip":"99999-0000" , "SendMail?":"Yes" , "CnAdrSal_Addressee":"Mr. Yeet Yaker" , "CnAdrSal_Salutation":"Mr. Yacker" , "yearbookphoto":"" } ]}
+
+
+
+function BodyLoad()
+  {
+  initPage();
+  }
+
+  function initPage()
+  {
+    //alert("made it");
+    var strlastnames;
+      //document.getElementById("demo").innerHTML += myObj[x];
+      var alen = alumnilist.alumni.length;
+      for (x=0;x<alen;x++)
+      {
+        //strlastnames = strlastnames + " " + alumnilist[x].LastName;
+        //console.log(x);
+        //console.log(alumnilist.alumni[x].LastName);
+
+        if (alumnilist.alumni[x].yearbookphoto > "")
+        {
+            //strlastnames = strlastnames + " " + alumnilist.alumni[x].LastName;
+            var element = document.getElementById(alumnilist.alumni[x].yearbookphoto);
+            //element.innerHTML = "";
+            var image = document.createElement("img");
+            var pic = new Image();
+            pic.src = "addressiconblue.png";
+            element.appendChild(pic);
+        }
+
+      }
+
+
+    //alert(strlastnames);
+  }
+  function showdata(imgname)
+  {
+    //alert(imgname.substring(0,imgname.length - 4));
+    if (imgname == "999_CameraShy")
+    {
+      //alert("camerashy");
+      camerashydata();
+    }
+    else
+    {
+      finddata(imgname);
+    }
+
+  }
+
+  function closedata()
+  {
+    var element = document.getElementById("datawrapper");
+    element.style.display="none";
+    var element = document.getElementById("datawrappershy");
+    element.style.display="none";
+  }
+
+  function finddata(imgcode)
+  {
+    var datafound = false;
+    var element = document.getElementById("datadiv");
+    element.innerHTML = "";
+
+    var alen = alumnilist.alumni.length;
+    for (x=0;x<alen;x++)
+    {
+      //strlastnames = strlastnames + " " + alumnilist[x].LastName;
+      //console.log(x);
+      //console.log(alumnilist.alumni[x].LastName);
+      //strlastnames = strlastnames + " " + alumnilist.alumni[x].LastName;
+      if (imgcode == alumnilist.alumni[x].yearbookphoto)
+      {
+        //alert (alumnilist.alumni[x].FirstName + " " + alumnilist.alumni[x].LastName);
+        datafound = true;
+        var innerDiv = document.createElement('div');
+
+        innerDiv.className = 'dataDetail';
+        var node = document.createTextNode(alumnilist.alumni[x].FirstName + " " + alumnilist.alumni[x].LastName);
+        innerDiv.appendChild(node);
+        element.appendChild(innerDiv);
+
+
+        var innerDiv1 = document.createElement('div');
+        innerDiv1.className = 'dataDetail';
+        var node1 = document.createTextNode(alumnilist.alumni[x].Email );
+        innerDiv1.appendChild(node1);
+        element.appendChild(innerDiv1);
+
+
+        var innerDiv2 = document.createElement('div');
+        innerDiv2.className = 'dataDetail';
+        var node2 = document.createTextNode(alumnilist.alumni[x].Address1 );
+        innerDiv2.appendChild(node2);
+        element.appendChild(innerDiv2);
+
+
+
+        var innerDiv3 = document.createElement('div');
+        innerDiv3.className = 'dataDetail';
+        var node3 = document.createTextNode(alumnilist.alumni[x].City + " " + alumnilist.alumni[x].State + " " + alumnilist.alumni[x].Zip);
+        innerDiv3.appendChild(node3);
+        element.appendChild(innerDiv3);
+
+        var picdiv = document.getElementById("picdiv");
+        picdiv.innerHTML = "";
+        var image = document.createElement("img");
+        var pic = new Image();
+        pic.src = imgcode + ".png";
+        picdiv.appendChild(pic);
+
+      }
+
+    }
+    if (datafound )
+    {
+      var element = document.getElementById("datawrapper");
+      element.style.display="block";
+    }
+
+  }
+
+  function camerashydata()
+  {
+    var datafound = false;
+    var element = document.getElementById("datadivshy");
+    element.innerHTML = "";
+
+    var alen = alumnilist.alumni.length;
+    for (x=0;x<alen;x++)
+    {
+      //strlastnames = strlastnames + " " + alumnilist[x].LastName;
+      //console.log(x);
+      //console.log(alumnilist.alumni[x].LastName);
+      //strlastnames = strlastnames + " " + alumnilist.alumni[x].LastName;
+      if (alumnilist.alumni[x].yearbookphoto =="")
+      {
+        //alert (alumnilist.alumni[x].FirstName + " " + alumnilist.alumni[x].LastName);
+        datafound = true;
+        var innerDiv = document.createElement('div');
+
+        var strdata = alumnilist.alumni[x].FirstName + " " + alumnilist.alumni[x].LastName;
+        if (alumnilist.alumni[x].MaidenName > "")
+        {
+          strdata = strdata + " (" + alumnilist.alumni[x].MaidenName  + ")";
+        }
+
+        strdata = strdata + " " + alumnilist.alumni[x].Email;
+        strdata = strdata + " " + alumnilist.alumni[x].Address1 ;
+        strdata = strdata + " " + alumnilist.alumni[x].City + " " + alumnilist.alumni[x].State + " " + alumnilist.alumni[x].Zip;
+
+        innerDiv.className = 'dataDetail';
+        var node = document.createTextNode(strdata);
+        innerDiv.appendChild(node);
+        element.appendChild(innerDiv);
+
+
+
+
+      }
+
+    }
+    if (datafound )
+    {
+      var element = document.getElementById("datawrappershy");
+      element.style.display="block";
+    }
+
+  }
+
+</script>
+<html>
